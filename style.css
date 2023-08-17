@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-image: url(img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    position: relative;
+    border: 1px solid rgb(240, 240, 240);
+    padding: 25px;
+    width: 280px;
+    padding-bottom: 15px;
+    border-radius: 15px;
+    background-color: rgba(56, 121, 206, 0.904);
+    -webkit-box-shadow: 0px 0px 37px 1px rgba(0, 0, 0, 0.43);
+    -moz-box-shadow: 0px 0px 37px 1px rgba(0, 0, 0, 0.43);
+    box-shadow: 0px 0px 37px 1px rgba(0, 0, 0, 0.43);
+}
+
+
+a:link {
+    color:rgb(223, 222, 222)
+}
+
+a:visited {
+    color:rgb(255, 255, 255)
+}
+
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+
+.card .card-header .card-icon {
+    position: absolute;
+    background-color: white;
+    border-radius: 35px;
+    border: 3px solid rgba(56, 121, 206, 0.904);
+    padding: 3px;
+    top: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20%;
+    z-index: 1;
+}
+
+.card .card-header .card-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+.card .card-body {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.input-field {
+    display: grid;
+}
+
+.input-field > input {
+    width: 100%;
+}
+
+.input-field label {
+    font-weight: bold;
+}
+
+.password-field {
+    border: 1px inset #ccc;
+    display: inline-block;
+    width: 100%;
+    background-color: white;
+}
+
+.password-field input {
+    border: none;
+    padding: 0;
+}
+
+.password-field .password-btn {
+    border: none;
+    background: none;
+    background-size: cover;
+    width: 24px !important;
+    height: 100%;
+    background-position: center center;
+    float: right;
+    cursor: pointer;
+}
+
+.password-field .show-password {
+    background-image: url('img/view.png');
+}
+
+.password-field .hide-password {
+    background-image: url('img/hide.png');
+}
+
+.card .card-footer {
+    border-top: 1px solid rgb(158, 154, 154);
+    padding-top: 15px;
+}
+
+.btn {
+    background-color: rgb(146, 181, 221);
+    color: rgb(35, 43, 49);
+    border-color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+}
+
+#btn1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 3px;
+}
+
+.btn:hover {
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.43);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.43);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.43);
+}
+
+.label-float {
+    font-size: 12px;
+}

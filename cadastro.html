@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="stylecad.css">
+</head>
+
+<body>
+    <div class="scroll-container">
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <img class="card-icon" src="img/user-add.png">
+                <div class="card-title">Cadastre-se</div>
+            </div>
+            <div class="card-body">
+                <div class="input-field">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id=" nome" placeholder="Digite seu nome completo" required>
+                </div>
+                <div class="input-field">
+                    <label for="matricula">Matrícula</label>
+                    <input type="text" id=" matricula" placeholder="Digite sua matrícula" required>
+                </div>
+                <div class="input-field">
+                    <label for="data">Data de Nascimento</label>
+                    <input type="date" id="data" name="data">
+                </div>
+                <div class="input-field">
+                    <label for="usuario">Email</label>
+                    <input type="text" id=" email" placeholder="Digite seu email" required>
+                </div>
+                <div class="input-field">
+                    <label for="sexo">Selecione o seu sexo</label>
+                    <div class="input-options">
+                        <label><input type="radio" name="sexo" value="masculino"> Masculino</label>
+                        <label><input type="radio" name="sexo" value="feminino"> Feminino</label>
+                    </div>
+                </div>
+                <div class="input-field">
+                    <label for="curso">Selecione o seu curso</label>
+                    <select id="curso" name="curso" required>
+                        <option value="" disabled selected> Selecione uma opção</option>
+                        <option value="si">Bacharelado em Sistemas de Informação</option>
+                        <option value="lf">Licenciatura em Física</option>
+                        <option value="lm">Licenciatura em Matemática</option>
+                        <option value="mc">Tecnologia em Mecatrônica Industrial</option>
+                        <option value="ee">Bacharelado em Engenharia Elétrica</option>
+                    </select>
+                </div>
+
+                <div class="input-field">
+                    <label for="numero">Qual o seu semestre?</label>
+                    <input type="number" id="numero" name="numero" min="1" max="8" step="1" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="turno">Selecione o turno de seu curso</label>
+                    <div class="input-options">
+                        <label><input type="checkbox" name="turno" value="manha"> Manhã </label>
+                        <label><input type="checkbox" name="turno" value="tarde"> Tarde </label>
+                        <label><input type="checkbox" name="turno" value="noite"> Noite </label>
+                    </div>
+                </div>
+                <div class="input-field">
+                    <label for="senha">Senha</label>
+                    <div class="password-field">
+                        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                        <div type="submit" class="password-btn show-password" onclick="toggleVisibility(this)"></div>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <a href="index.html"><button type="button" class="btn">Voltar</button></a>
+                    <button class="btn">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <script>
+            function toggleVisibility(elem) {
+                const passwordInput = elem.parentElement.getElementsByTagName("input")[0];
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    elem.classList.remove("show-password");
+                    elem.classList.add("hide-password");
+                } else {
+                    passwordInput.type = 'password';
+                    elem.classList.add("show-password");
+                    elem.classList.remove("hide-password");
+                }
+            }
+        </script>
+
+</body>
+
+</html>

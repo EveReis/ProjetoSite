@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form>
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <img class="card-icon" src="img/user.png">
+                    <div class="card-title">Entrar</div>
+                </div>
+                <div class="card-body">
+                    <form action="" method="post">
+                        <div class="input-field">
+                            <label for="usuario">Usuário</label>
+                            <input type="text" name="usuario" id="usuario" placeholder="Email ou Matrícula" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="senha">Senha</label>
+                            <div class="password-field">
+                                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                                <div type="submit" class="password-btn show-password" onclick="toggleVisibility(this)"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="lembrar" value="lembrar"> <label>Lembre de mim</label>
+                        </div>
+                        <a href="redefinir.html">Esqueceu a senha?</a>
+                        <button class="btn" id="btn1">Entrar</button>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    Não possui uma conta?
+                    <a href="cadastro.html">Cadastre-se</a>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        function toggleVisibility(elem) {
+            const passwordInput = elem.parentElement.getElementsByTagName("input")[0]; 
+            if(passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                elem.classList.remove("show-password");
+                elem.classList.add("hide-password");
+            }else {
+                passwordInput.type = 'password';
+                elem.classList.add("show-password");
+                elem.classList.remove("hide-password");
+            }
+        }
+    </script>
+</body>
+
+</html>
